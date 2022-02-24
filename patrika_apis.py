@@ -15,7 +15,7 @@ def index():
     # return {"landing page":"here"}
 
 # cussword filter API
-@app.get("/cussword-filter/{article: str}")
+@app.get("/cussword-filter/{article}")
 def filter_article(article : str):
     final_str = replace_with_strike(article)
     return {
@@ -27,4 +27,4 @@ def filter_article(article : str):
 # to make the conda based requirements.txt file
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=5049)
+    uvicorn.run(app, host="*")
