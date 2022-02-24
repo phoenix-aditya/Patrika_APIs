@@ -11,8 +11,8 @@ app = FastAPI()
 # landing page
 @app.get("/")
 def index():
-    # return FileResponse("landing_page/index.html")
-    return {"landing page":"here"}
+    return FileResponse("landing_page/index.html")
+    # return {"landing page":"here"}
 
 # cussword filter API
 @app.get("/cussword-filter/{article: str}")
