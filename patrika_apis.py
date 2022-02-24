@@ -22,4 +22,9 @@ def filter_article(article : str):
             "status":"pass",
             "filtered-text":final_str
         }
-    
+
+# use command pip list --format=freeze > requirements.txt
+# to make the conda based requirements.txt file
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=5049)
