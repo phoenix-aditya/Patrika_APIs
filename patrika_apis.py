@@ -9,9 +9,10 @@ from cussword_filter_dependencies.filters import *
 app = FastAPI()
 
 # landing page
-@app.get("/")
-def index():
-    return FileResponse("landing_page/index.html")
+# @app.get("/")
+# def index():
+#     return FileResponse("landing_page/index.html")
+
 
 # cussword filter API
 @app.get("/cussword-filter/{article: str}")
