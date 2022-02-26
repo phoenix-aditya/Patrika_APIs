@@ -5,8 +5,17 @@ from starlette.responses import FileResponse
 
 # custom file filters
 from cussword_filter_dependencies.filters import *
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # landing page
 @app.get("/")
